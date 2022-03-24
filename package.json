@@ -31,7 +31,8 @@
     ],
     "rules": {
       "no-unused-vars": "off",
-      "no-useless-constructor": "off"
+      "no-useless-constructor": "off",
+      "jsx-a11y/anchor-is-valid": "off"
     }
   },
   "browserslist": {
