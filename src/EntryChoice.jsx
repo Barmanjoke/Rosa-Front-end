@@ -16,6 +16,7 @@ class EntryChoice extends React.Component {
 	wanna_log_in = () => { this.setState({wanna_log_in: true, wanna_register: false}) };
 	change_wanna_register = () => { this.setState({wanna_log_in: false, wanna_register: true}) };
 
+	handle_anonymous_login = () => { this.props.change_state({type_uid: "anonymous"})};
 
 	render() {
 		let register_display = this.state.wanna_register ? <Register /> :
@@ -41,7 +42,12 @@ class EntryChoice extends React.Component {
 						<hr/>
 						<div className="row">
 							<div className="col-md">
-								<button className="btn btn-primary btn-block btn-lg"> Access Safezone Anonymously </button>
+								<button 
+									className="btn btn-primary btn-block btn-lg"
+									onClick={this.handle_anonymous_login}
+								> 
+									Access Safezone Anonymously
+								</button>
 							</div>
 							<div className="col-md">
 								{register_display}

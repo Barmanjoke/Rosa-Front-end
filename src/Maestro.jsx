@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import EntryChoice from './EntryChoice';
+import Safespace from './Safespace';
 
 class Maestro extends React.Component {
 
@@ -21,7 +22,7 @@ class Maestro extends React.Component {
 			{uid: "home_individual", display: <EntryChoice change_state={this.change_user_profile} />},
 			{uid: "home_business", display: <EntryChoice change_state={this.change_user_profile} />},
 			{uid: "home_partner", display: <EntryChoice change_state={this.change_user_profile} />},
-			{uid: "home_anonymous", display: <EntryChoice change_state={this.change_user_profile} />},
+			{uid: "home_anonymous", display: <Safespace />},
 		];
 
 		const display = pages.filter((entry) => entry.uid === this.state.current_uid)[0].display;

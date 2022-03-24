@@ -77,3 +77,15 @@
 
   height: 100vh;
 }
+
+.msg-page {
+  background-color: #3A3845;
+}
+
+.message-input {
+  background-color: #3A3845;
+}
+
+body {
+  background-color: #3A3845 !important;
+}

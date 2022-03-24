@@ -20,7 +20,6 @@ class Register extends React.Component {
     let pages = [
       {uid: "default", display: <DefaultRegister onChange={this.change_current_uid}/>},
       {uid: "register_individual", display: <RegisterIndividual />},
-      {uid: "register_anonymous", display: <RegisterIndividual />},
       {uid: "register_partner", display: <RegisterPartner />},
       {uid: "register_business", display: <RegisterBusiness />},
     ];
