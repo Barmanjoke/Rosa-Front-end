@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-import 'react-chatbox-component/dist/style.css';
-import {ChatBox} from 'react-chatbox-component';
+import '@barmanjoke/react-chatbox-component/dist/style.css';
+import {ChatBox} from '@barmanjoke/react-chatbox-component';
 
 const Hedy = {
   "name": "Hedy Lamarr",
