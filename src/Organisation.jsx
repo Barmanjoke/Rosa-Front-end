@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Select from 'react-select';
+import Maestro_orga from './Maestro_orga';
+import Template from './Template';
 
 class Organisation extends React.Component {
 
@@ -10,6 +12,8 @@ class Organisation extends React.Component {
 			user_name: "",
 			session_option: "G5Gff5dFFd65sd",
 			onClick: false,
+			onTemplate: false,
+			current_uid: "orga",
 		}
 	}
 		CopyonClick = () => {navigator.clipboard.writeText(`https://register/${this.state.session_option}`)};
@@ -30,9 +34,10 @@ class Organisation extends React.Component {
 		{ value: 'six_months', label: '6 months' }
 		]
 
-		const MyComponent = () => (
-		<Select options={options} />
-		)
+		const MyComponent = () => (<Select options={options} />)
+
+		let funct_to_temp = this.state.onTemplate ? <Maestro_orga/> : <button className="btn btn-success btn-lg btn-block" onClick={() => {this.props.change_current_uid({current_uid: "template"})}}> Template </button>;
+
 		return (
 			<div id="orga_page" className="p-5 text-center bg-image">
 				<header className="d-flex justify-content-center align-items-center h-100">
@@ -45,6 +50,10 @@ class Organisation extends React.Component {
 						</h4>
 						<hr/>
 						<h2> {title} </h2>
+						<br></br>
+						<div>
+							{funct_to_temp}
+						</div>
 						<br></br>
 						<div>
 							<label> How long the session is available: </label>
@@ -62,6 +71,7 @@ class Organisation extends React.Component {
 								</div>
 							:null
 						}
+						
 
 					</div>
 				</header>

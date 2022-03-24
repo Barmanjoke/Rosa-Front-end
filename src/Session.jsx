@@ -12,7 +12,7 @@ class Session extends React.Component {
 	}
 
 	render() {
-		const title = ``;
+		const title = `Session`;
 
 		return (
 			<div id="orga_page" className="p-5 text-center bg-image">
