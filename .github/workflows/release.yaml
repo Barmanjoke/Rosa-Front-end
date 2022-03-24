@@ -20,6 +20,6 @@ jobs:
         username: ${{ github.actor }}
         password: ${{ secrets.GHCR_TOKEN }}
     - name: Dockerize
-      run: docker build -t ghcr.io/${{ steps.vars.outputs.repo }}:${{ steps.vars.outputs.tag }}
+      run: docker build -t ghcr.io/${{ steps.vars.outputs.repo }}:${{ steps.vars.outputs.tag }} .
     - name: Publish
       run: docker push ghcr.io/${{ steps.vars.outputs.repo }}:${{ steps.vars.outputs.tag }}
