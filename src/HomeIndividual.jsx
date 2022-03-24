@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Feed from './Feed'
 import Courses from './Courses'
 import Profile from './Profile'
@@ -51,7 +51,7 @@ class HomeIndividual extends React.Component {
 		const display = pages.filter((entry) => entry.uid === this.state.current_uid)[0].display;
 		return (
 			<div id="home_individual">
-				<nav class="navbar sticky-top">
+				<nav class="navbar sticky-top color2">
 					<li class="navbar-brand">
 						<strong className="color2">{`Hello, ${this.props.user_profile.name}`}</strong>
 					</li>

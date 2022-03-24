@@ -1,9 +1,6 @@
 import * as React from 'react';
 
 class LogIn extends React.Component {
-  constructor(props) {
-    super(props);
-  }
 
   handleSubmit = (event) => {
     event.preventDefault();
@@ -55,7 +52,7 @@ class LogIn extends React.Component {
           value={this.props.password}
         />
         </div>
-        <button className="form-control btn btn-success"> Send </button>
+        <button className="form-control btn btn-primary"> Send </button>
       </form>
     );
   }

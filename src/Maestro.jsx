@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import EntryChoice from './EntryChoice';
 import Safespace from './Safespace';
 import HomeIndividual from './HomeIndividual';	
