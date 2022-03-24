@@ -19,19 +19,28 @@ class DefaultRegister extends React.Component {
             </div>
 
             <div className="row">
-              <button className="btn btn-outline-light btn-lg text-left btn-block m-1"> 
+              <button 
+                className="btn btn-outline-light btn-lg text-left btn-block m-1"
+                onClick={() => this.props.onChange("register_anonymous") }
+              > 
                 An Anonymous Individual
               </button>
             </div>
 
             <div className="row">
-              <button className="btn btn-outline-light btn-lg text-center btn-block m-1">
+              <button 
+                className="btn btn-outline-light btn-lg text-left btn-block m-1"
+                onClick={() => this.props.onChange("register_partner") }
+              > 
                 A Partner
               </button>
             </div>
 
             <div className="row">
-              <button className="btn btn-outline-light btn-lg text-right btn-block m-1">
+              <button 
+                className="btn btn-outline-light btn-lg text-left btn-block m-1"
+                onClick={() => this.props.onChange("register_business") }
+              > 
                 A Business
               </button>
             </div>

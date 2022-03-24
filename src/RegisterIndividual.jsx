@@ -7,15 +7,15 @@ class RegisterIndividual extends React.Component {
     this.state = {
       first_name: undefined,
       last_name: undefined,
-      email_name: undefined,
+      email: undefined,
       birth_date: new Date(),
     }
   }
 
-  change_first_name = (first_name) => { this.setState({first_name}); };
-  change_last_name = (last_name) => { this.setState({last_name}); };
-  change_email = (email) => { this.setState({email}); };
-  change_birth_date = (birth_date) => { this.setState({birth_date}); };
+  change_first_name = ({target: {first_name}}) => { this.setState({first_name}); };
+  change_last_name = ({target: {last_name}}) => { this.setState({last_name}); };
+  change_email = ({target: {email}}) => { this.setState({email}); };
+  change_birth_date = ({target: {birth_date}}) => { this.setState({birth_date}); };
 
   render() {
     const first_name_label = "What is your first name?";
