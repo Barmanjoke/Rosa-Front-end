@@ -73,6 +73,8 @@ class RegisterBusiness extends React.Component {
           />
           </div>
 
+          <button className="form-control btn btn-warning"> Send </button>
+
         </form>
       </div>
     );
