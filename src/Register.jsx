@@ -1,28 +1,29 @@
 import * as React from 'react';
+import DefaultRegister from './DefaultRegister';
+import RegisterIndividual from './RegisterIndividual';
 
-class LogIn extends React.Component {
+class Register extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      current_uid: "default",
+    };
   }
 
+  change_current_uid = (current_uid) => { console.log("cu_uid", current_uid); this.setState({current_uid});};
+
   render() {
+    let pages = [
+      {uid: "default", display: <DefaultRegister onChange={this.change_current_uid}/>},
+      {uid: "register_individual", display: <RegisterIndividual />},
+    ];
+    const display = pages.filter((entry) => entry.uid === this.state.current_uid)[0].display;
     return (
       <div id="register">
-        <h6> New here? You are... </h6>
-        <nav className="text-white">
-            <button className="btn btn-outline-light btn-lg text-left btn-block m-1" onClick={() => this.props.change_state("individual")}> 
-              An Individual
-            </button>
-            <button className="btn btn-outline-light btn-lg text-center btn-block m-1" onClick={() => this.props.change_state("partner")}>
-              A Partner
-            </button>
-            <button className="btn btn-outline-light btn-lg text-right btn-block m-1" onClick={() => this.props.change_state("business")}>
-              A Business
-            </button>
-        </nav>
+        {display}
       </div>
     );
   }
 }
 
-export default LogIn;
+export default Register;
