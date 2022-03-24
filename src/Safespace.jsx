@@ -61,7 +61,11 @@ class Safespace extends React.Component {
 		console.log("tis", this);
 		console.log("eve", event);
 		let msgs = this.state.messages;
-		msgs.push(msg);
+		msgs.push({
+			text: msg,
+			id: msgs[msgs.length-1].id+1,
+			sender: alice,
+		});
 		this.setState({messages: msgs}); 
 	}
 
