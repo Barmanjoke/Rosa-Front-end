@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
-import EntryChoice from './EntryChoice';
 
-class Maestro extends React.Component {
+class Safespace extends React.Component {
 
 	constructor(props){
 		super(props);
 		this.state = {
-			current_uid: "entry_choice",
-			user_profile: undefined,
 		}
 	}
 
@@ -31,4 +28,4 @@ class Maestro extends React.Component {
 	}
 }
 
-export default Maestro;
+export default Safespace;
