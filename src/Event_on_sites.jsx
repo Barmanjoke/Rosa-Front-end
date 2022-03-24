@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 
-class Session extends React.Component {
+class Event_on_sites extends React.Component {
 
 	constructor(props) {
 		super(props);
@@ -33,4 +33,4 @@ class Session extends React.Component {
 	}
 }
 
-export default Session;
+export default Event_on_sites;

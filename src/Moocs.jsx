@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
 
 
-class Session extends React.Component {
+class Moocs extends React.Component {
 
 	constructor(props) {
 		super(props);
 		this.state = {
 			create_session: false,
 			user_name: "",
+			current_uid: "moocs",
 		}
 	}
 
 	render() {
-		const title = `Session`;
+		const title = `Moocs`;
 
 		return (
 			<div id="orga_page" className="p-5 text-center bg-image">
@@ -26,6 +27,7 @@ class Session extends React.Component {
 						</h4>
 						<hr />
 						<h2> {title} </h2>
+						<button className="form-control btn-lg btn-block btn btn-success"> Moocs </button>
 					</div>
 				</header>
 			</div>
@@ -33,4 +35,4 @@ class Session extends React.Component {
 	}
 }
 
-export default Session;
+export default Moocs;

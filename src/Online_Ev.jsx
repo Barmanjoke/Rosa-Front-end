@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 
 
-class Session extends React.Component {
+class Online_Ev extends React.Component {
 
 	constructor(props) {
 		super(props);
 		this.state = {
 			create_session: false,
 			user_name: "",
+			current_uid: "online_ev",
 		}
 	}
 
@@ -33,4 +34,4 @@ class Session extends React.Component {
 	}
 }
 
-export default Session;
+export default Online_Ev;
