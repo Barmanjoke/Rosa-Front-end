@@ -1,4 +1,4 @@
-.App {
+/*.App {
   text-align: center;
 }
 
@@ -35,4 +35,49 @@
   to {
     transform: rotate(360deg);
   }
+}*/
+
+.color1 {
+  color:  #3A3845;
+}
+
+.color2 {
+  color:  #F7CCAC;
+}
+
+.color3 {
+  color:  #C69B7B;
+}
+
+.color4 {
+  color:  #826F66;
+}
+
+.bg_color1 {
+  background-color:  #3A3845;
+}
+
+.bg_color2 {
+  background-color:  #F7CCAC;
+}
+
+.bg_color3 {
+  background-color:  #C69B7B;
+}
+
+.bg_color4 {
+  background-color:  #826F66;
+}
+
+#entry_choice {
+  /*
+  background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/041.webp');
+  */
+  background-color: #3A3845;
+
+  height: 100vh;
+}
+
+#log_in .text-left {
+  text-align: left !important;
 }
