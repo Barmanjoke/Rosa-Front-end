@@ -11,6 +11,8 @@ class RegisterBusiness extends React.Component {
       company_name: undefined,
       email: undefined,
       phone: undefined,
+      size: 'small',
+      free_text: undefined,
     };
   }
 
@@ -18,12 +20,14 @@ class RegisterBusiness extends React.Component {
   change_email = ({target: {email}}) => { this.setState({email}); };
   change_phone = (phone) => { this.setState({phone}); };
   change_size = (size) => { this.setState({size}); };
+  change_free_text = ({target: {free_text}}) => { this.setState({free_text}); };
 
   render(){
     const company_name_label = "What is the name of your company?";
     const email_label = "What is your email?";
     const phone_label = "At which phone number shall we contact you?";
     const size_label = "How many employees do you have?";
+    const free_text_label = "Is there anything you want to tell us?";
 
     const size_options = [
       { value: 'small', label: '< 10' },
@@ -65,6 +69,8 @@ class RegisterBusiness extends React.Component {
 
           <br/>
 
+
+          {/* warning, size is never really registed cause I don't have enough time to read the doc lmao*/}
           <label htmlFor="size"> {size_label} </label>
           <div className="color1">
           <Select 
@@ -72,6 +78,14 @@ class RegisterBusiness extends React.Component {
             menuColor='black'
           />
           </div>
+          <br/>
+
+          <label htmlFor="free_text"> {free_text_label} </label>
+          <textarea 
+            className="form-control"
+            onChange={this.change_free_text}
+            value={this.state.free_text}
+          > </textarea>
 
           <button className="form-control btn btn-warning"> Send </button>
 

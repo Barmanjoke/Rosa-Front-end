@@ -21,15 +21,6 @@ class DefaultRegister extends React.Component {
             <div className="row">
               <button 
                 className="btn btn-outline-light btn-lg text-left btn-block m-1"
-                onClick={() => this.props.onChange("register_anonymous") }
-              > 
-                An Anonymous Individual
-              </button>
-            </div>
-
-            <div className="row">
-              <button 
-                className="btn btn-outline-light btn-lg text-left btn-block m-1"
                 onClick={() => this.props.onChange("register_partner") }
               > 
                 A Partner

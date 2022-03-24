@@ -41,6 +41,9 @@ class EntryChoice extends React.Component {
 						<hr/>
 						<div className="row">
 							<div className="col-md">
+								<button className="btn btn-primary btn-block btn-lg"> Access Safezone Anonymously </button>
+							</div>
+							<div className="col-md">
 								{register_display}
 							</div>
 							<div className="col-md">
