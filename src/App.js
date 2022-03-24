@@ -1,11 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
-import Maestro from './Maestro';
+import Maestro_orga from './Maestro_orga';
+import Organisation from './Organisation';
+import Template from './Template';
 
 function App() {
   return (
     <div className="App">
-      <Maestro />
+      <Maestro_orga />
     </div>
   );
 }
