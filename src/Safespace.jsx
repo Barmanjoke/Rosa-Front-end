@@ -56,15 +56,13 @@ class Safespace extends React.Component {
 	change_msg_being_written = (msg_being_written) => {
 		this.setState({msg_being_written});
 	};
-
-	get_that = () => this;
 	
-	register_message(msg) {
+	register_message = (msg, event) => {
 		console.log("tis", this);
-		let that = this.that_generator();
-		let msgs = that.state.messages;
+		console.log("eve", event);
+		let msgs = this.state.messages;
 		msgs.push(msg);
-		that.setState({messages: msgs}); 
+		this.setState({messages: msgs}); 
 	}
 
 	render() {
@@ -85,7 +83,6 @@ class Safespace extends React.Component {
 					</p>
 					<ChatBox
 					  messages={messages}
-					  that_generator={this.get_that}
 					  onSubmit={this.register_message}
 					/>
 				</div>
