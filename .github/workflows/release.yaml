@@ -21,5 +21,11 @@ jobs:
         password: ${{ secrets.GHCR_TOKEN }}
     - name: Dockerize
       run: docker build -t ghcr.io/${{ steps.vars.outputs.repo }}:${{ steps.vars.outputs.tag }} .
-    - name: Publish
+    - name: Publish Container
       run: docker push ghcr.io/${{ steps.vars.outputs.repo }}:${{ steps.vars.outputs.tag }}
+    - name: Deploy to Azure
+      uses: azure/webapps-deploy@v2
+      with:
+        app-name: ${{ secrets.AZURE_APP }}
+        publish-profile: ${{ secrets.AZURE_APP_PUBLISH_PROFILE }}
+        images: ghcr.io/${{ steps.vars.outputs.repo }}:${{ steps.vars.outputs.tag }}
