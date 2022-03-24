@@ -92,8 +92,8 @@ class Safespace extends React.Component {
 				</div>
 				<div className="container">
 				  <nav className="navbar">
-				    <a className="btn navbar-btn btn-danger btn-lg" href="#"> Report an abuse. </a>
-				    <a className="btn navbar-btn btn-warning btn-lg" href="#"> Contact a psychologist. </a>
+				    <a className="btn navbar-btn btn-danger btn-lg"> Report an abuse. </a>
+				    <a className="btn navbar-btn btn-warning btn-lg"> Contact a psychologist. </a>
 				{/*<small className="color2"> By reporting your interlocutor, the conversation will end immediately, and the RosaParks.app team will make sure to take the appropriate measures. </small> */}
 
 				  </nav>
