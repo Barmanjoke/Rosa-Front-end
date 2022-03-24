@@ -1,13 +1,19 @@
 import React, { Component } from 'react';
 import EntryChoice from './EntryChoice';
 import Safespace from './Safespace';
+import HomeIndividual from './HomeIndividual';	
+
+const fake_individual_profile = {
+	name: "Alice",
+	type_uid: "individual",
+};
 
 class Maestro extends React.Component {
 
 	constructor(props){
 		super(props);
 		this.state = {
-			current_uid: "entry_choice",
+			current_uid: "home_individual",
 			user_profile: undefined,
 		}
 	}
@@ -19,7 +25,7 @@ class Maestro extends React.Component {
 	render() {
 		let pages = [
 			{uid: "entry_choice", display: <EntryChoice change_state={this.change_user_profile} />},
-			{uid: "home_individual", display: <EntryChoice change_state={this.change_user_profile} />},
+			{uid: "home_individual", display: <HomeIndividual user_profile={fake_individual_profile} />},
 			{uid: "home_business", display: <EntryChoice change_state={this.change_user_profile} />},
 			{uid: "home_partner", display: <EntryChoice change_state={this.change_user_profile} />},
 			{uid: "home_anonymous", display: <Safespace />},
