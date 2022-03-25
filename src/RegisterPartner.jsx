@@ -1,5 +1,4 @@
 import * as React from 'react';
-import DatePicker from 'react-date-picker'
 
 import 'react-phone-number-input/style.css'
 import PhoneInput from 'react-phone-number-input'

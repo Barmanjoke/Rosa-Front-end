@@ -1,8 +1,6 @@
 import * as React from 'react';
+
 class DefaultRegister extends React.Component {
-  constructor(props) {
-    super(props);
-  }
 
   render(){
     return (

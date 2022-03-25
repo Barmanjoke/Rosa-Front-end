@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Register from './Register';
 import LogIn from './LogIn';
 
+import Particles from './Particles';
 
 class EntryChoice extends React.Component {
 
@@ -31,6 +32,7 @@ class EntryChoice extends React.Component {
 		;
 		return (
 			<div id="entry_choice" className="p-5 text-center bg-image">
+				<Particles/>
 				<header className="d-flex justify-content-center align-items-center h-100">
 					<div className="text-white">
 						<h1 className="mb-3"> 

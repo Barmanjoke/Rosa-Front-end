@@ -2,7 +2,6 @@ import * as React from 'react';
 import 'react-phone-number-input/style.css';
 import PhoneInput from 'react-phone-number-input';
 import Select from 'react-select';
-import makeAnimated from 'react-select/animated';
 
 class RegisterBusiness extends React.Component {
   constructor(props) {
