@@ -17,7 +17,7 @@ class EntryChoice extends React.Component {
 	wanna_log_in = () => { this.setState({wanna_log_in: true, wanna_register: false}) };
 	change_wanna_register = () => { this.setState({wanna_log_in: false, wanna_register: true}) };
 
-	handle_anonymous_login = () => { this.props.change_state({type_uid: "anonymous"})};
+	handle_anonymous_login = () => { this.props.change_state("anonymous")};
 
 	render() {
 		let register_display = this.state.wanna_register ? <Register /> :
@@ -25,7 +25,7 @@ class EntryChoice extends React.Component {
 				Register
 			</button>
 		;
-		let log_in_display = this.state.wanna_log_in ? <LogIn /> : 
+		let log_in_display = this.state.wanna_log_in ? <LogIn change_state={this.props.change_state} /> : 
 			<button className="btn btn-success btn-lg btn-block" onClick={this.wanna_log_in}> 
 				Log In 
 			</button>

@@ -1,25 +1,13 @@
 import * as React from 'react';
+import { login } from './rq';
 
 class LogIn extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-/*   todo: connect to backend, here is an example code from an old project
-    axios.post("/users/login", {
-      email: this.state.email, 
-      password: this.state.password
+    login(event.target.email.value, event.target.password.value).then(u => {
+      this.props.change_state('individual', u)
     })
-    .then(response => {
-      if(response.status === 200){
-        const token = response.data.token;
-        const user = response.data.user;
-
-        this.props.updateAuth(user, token);
-      }
-    })
-    .catch(function(error) {
-        console.log(error);
-    });*/
   }
 
   render() {
