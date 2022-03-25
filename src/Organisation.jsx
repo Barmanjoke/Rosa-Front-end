@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Select from 'react-select';
-import Maestro_orga from './Maestro_orga';
+import MaestroOrga from './MaestroOrga';
 
 class Organisation extends React.Component {
 

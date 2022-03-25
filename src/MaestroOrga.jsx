@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Organisation from './Organisation';
 
-class Maestro_orga extends React.Component {
+class MaestroOrga extends React.Component {
 
 	constructor(props) {
 		super(props);
@@ -25,4 +25,4 @@ class Maestro_orga extends React.Component {
 	}
 }
 
-export default Maestro_orga;
+export default MaestroOrga;
