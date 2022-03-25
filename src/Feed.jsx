@@ -51,12 +51,12 @@ class Feed extends React.Component {
 							<br/>
 							<header className="col-lg">
 								<p 
-									class="col-sm alert"
+									className="col-sm alert"
 									style={{"text-align": "left"}}
 								> 
 									<img 
 										src={process.env.PUBLIC_URL+elem.publisher_logo}
-										class="card-img-top"
+										className="card-img-top"
 										alt={elem.publisher_name}
 										style={{width: '3rem', "text-align": "left", "margin-right": "1vw"}}
 									/>
