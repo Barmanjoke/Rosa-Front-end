@@ -2,6 +2,7 @@ import React from 'react';
 
 import '@barmanjoke/react-chatbox-component/dist/style.css';
 import {ChatBox} from '@barmanjoke/react-chatbox-component';
+import { getMessages, getSafeZone, postMessage } from './rq';
 
 const Hedy = {
   "name": "Hedy Lamarr",
@@ -24,7 +25,7 @@ class Safespace extends React.Component {
 			  "uid" : "user1", //do not change this value, for whatever reason, the lib doesn't accept change :/
 			},
 			messages: [
-				{
+				/*{
 				    "text": "Hello there",
 				    "id": "1",
 				    "sender": Hedy
@@ -43,10 +44,26 @@ class Safespace extends React.Component {
 		          	"text": "Yeah! 😅",
 		          	"id": "4",
 		          	"sender": Hedy
-		        },
+		        },*/
 			],
 			msg_being_written: undefined,
+			szs: undefined,
 		}
+		getSafeZone(this.props.user_profile.id).then(szs => {
+			this.setState({szs});
+			console.log("SZS: ", szs);
+			this.refresh_messages();
+		})
+	}
+
+	refresh_messages = () => {
+		getMessages(this.state.szs).then(messages => {
+			this.setState({messages: messages.map(m => ({
+				text: m.content,
+				id: m.id,
+				sender: m.user_id === this.props.user_profile.id ? alice : Hedy,
+			}))});
+		})
 	}
 
 	change_msg_being_written = (msg_being_written) => {
@@ -54,15 +71,16 @@ class Safespace extends React.Component {
 	};
 	
 	register_message = (msg, event) => {
-		console.log("tis", this);
-		console.log("eve", event);
-		let msgs = this.state.messages;
+		postMessage(this.state.szs, this.props.user_profile.id, msg).then(() => {
+			this.refresh_messages();
+		})
+		/*let msgs = this.state.messages;
 		msgs.push({
 			text: msg,
 			id: msgs[msgs.length-1].id+1,
 			sender: alice,
 		});
-		this.setState({messages: msgs}); 
+		this.setState({messages: msgs});*/
 	}
 
 	render() {

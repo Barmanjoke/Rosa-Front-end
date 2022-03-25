@@ -36,7 +36,7 @@ class Maestro extends React.Component {
 			{uid: "home_individual", display: <HomeIndividual user_profile={fake_individual_profile} />},
 			{uid: "home_business", display: <MaestroOrga change_state={this.change_user_profile} />},
 			{uid: "home_partner", display: <EntryChoice change_state={this.change_user_profile} />},
-			{uid: "home_anonymous", display: <Safespace />},
+			{uid: "home_anonymous", display: <Safespace user_profile={this.user_profile}/>},
 		];
 		const display = pages.filter((entry) => entry.uid === this.state.current_uid)[0].display;
 		return (
