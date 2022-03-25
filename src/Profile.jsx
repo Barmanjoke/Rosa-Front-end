@@ -47,7 +47,7 @@ class Profile extends React.Component {
 				</div>
 				<hr/>
 				<div className="row">
-					<h2> {first_name}'s bio: </h2>
+					<h2> {first_name}'s bio </h2>
 					<p className="col-lg text-white"> 
 						{description}
 					</p>
