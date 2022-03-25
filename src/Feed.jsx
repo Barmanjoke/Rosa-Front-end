@@ -48,7 +48,7 @@ class Feed extends React.Component {
 			{
 				content.map((elem) => (
 						<article className="row">
-							<hr/>
+							<br/>
 							<header className="col-lg">
 								<p 
 									class="col-sm alert"
@@ -66,7 +66,7 @@ class Feed extends React.Component {
 							<main className="text-center">
 								{elem.content}
 							</main>
-							<hr/>
+							<br/>
 						</article>
 					)
 				)

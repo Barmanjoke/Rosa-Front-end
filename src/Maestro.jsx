@@ -4,8 +4,11 @@ import Safespace from './Safespace';
 import HomeIndividual from './HomeIndividual';	
 
 const fake_individual_profile = {
-	name: "Alice",
+	first_name: "Alice",
+	last_name: "Caroll",
 	type_uid: "individual",
+	picture: "alice.png",
+	description: <p> Have you ever fallen down a rabbit hole and thought you'd never be back? <br/> Only to be treated as a weirdo by the people around you while you were doing so? <br/> Well, I have a good news, you do get back on the <strong> right side of the mirror!</strong> </p>,
 };
 
 class Maestro extends React.Component {
@@ -30,10 +33,11 @@ class Maestro extends React.Component {
 			{uid: "home_partner", display: <EntryChoice change_state={this.change_user_profile} />},
 			{uid: "home_anonymous", display: <Safespace />},
 		];
-
 		const display = pages.filter((entry) => entry.uid === this.state.current_uid)[0].display;
 		return (
-			display
+			<div id="maestro">
+				{display}
+			</div>
 		);
 	}
 }

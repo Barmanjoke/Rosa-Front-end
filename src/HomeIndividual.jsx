@@ -44,7 +44,7 @@ class HomeIndividual extends React.Component {
 			},
 			{
 				uid: "profile" ,
-				display: <Profile />,
+				display: <Profile user_profile={this.props.user_profile}/>,
 			},
 		];
 
@@ -53,7 +53,7 @@ class HomeIndividual extends React.Component {
 			<div id="home_individual">
 				<nav class="navbar sticky-top color2">
 					<li class="navbar-brand">
-						<strong className="color2">{`Hello, ${this.props.user_profile.name}`}</strong>
+						<strong className="color2">{`Hello, ${this.props.user_profile.first_name}`}</strong>
 					</li>
 					{
 						nav_btns.map((elem) => (

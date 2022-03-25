@@ -1,4 +1,5 @@
 import React from 'react';
+import Particles from './Particles';
 
 import '@barmanjoke/react-chatbox-component/dist/style.css';
 import {ChatBox} from '@barmanjoke/react-chatbox-component';
