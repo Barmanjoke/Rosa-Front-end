@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Select from 'react-select';
 import Maestro_orga from './Maestro_orga';
-import Template from './Template';
 
 class Organisation extends React.Component {
 
@@ -9,7 +8,7 @@ class Organisation extends React.Component {
 		super(props);
 		this.state = {
 			create_session: false,
-			user_name: "",
+			user_name: "Spring ACT",
 			session_option: "G5Gff5dFFd65sd",
 			onClick: false,
 			onTemplate: false,
@@ -21,7 +20,7 @@ class Organisation extends React.Component {
 
 	render() {
 
-		const title = `Hi ${this.state.user_name}, welcome back!`;
+		const title = <h1> Good day to you, dear admin from <strong className="color2"> {this.state.user_name}</strong>!</h1>;
 
 		const options = [
 			{ value: 'hours', label: '12 hours' },
@@ -33,22 +32,21 @@ class Organisation extends React.Component {
 			{ value: 'two_months', label: '2 months' },
 			{ value: 'six_months', label: '6 months' }
 		]
+		const custom_style = {
+			option: (provided, state) => ({
+			    ...provided,
+			    color: state.isSelected ? 'yellow' : 'black',
+			    padding: 20,
+			  }),
+		}
+		const MyComponent = () => (<Select options={options} styles={custom_style} menuColor="red" />)
 
-		const MyComponent = () => (<Select options={options} />)
-
-		let funct_to_temp = this.state.onTemplate ? <Maestro_orga /> : <button className="btn btn-success btn-lg btn-block" onClick={() => { this.props.change_current_uid({ current_uid: "template" }) }}> Template </button>;
+		let funct_to_temp = () => {};
 
 		return (
 			<div id="orga_page" className="p-5 text-center bg-image">
 				<header className="d-flex justify-content-center align-items-center h-100">
 					<div className="text-white">
-						<h1 className="mb-3">
-							<span className="color2">Rosaparks.app</span>
-						</h1>
-						<h4 className="mb-3">
-							Empowering the <span className="color2">wronged</span> , enabling the <span className="color2">witness</span> , teaching the <span className="color2">uninformed</span>.
-						</h4>
-						<hr />
 						<h2> {title} </h2>
 						<br></br>
 						<div>
@@ -56,7 +54,7 @@ class Organisation extends React.Component {
 						</div>
 						<br></br>
 						<div>
-							<label> How long the session is available: </label>
+							<label> How long will the session be available? </label>
 							<MyComponent />
 						</div>
 						<br></br>
@@ -67,11 +65,10 @@ class Organisation extends React.Component {
 
 								<div>
 									<br></br>
-									<button className="form-control btn-lg btn-block btn btn-success" onClick={this.CopyonClick}> https://register/{this.state.session_option} </button>
+									<button className="form-control btn-lg btn-block btn btn-success" onClick={this.CopyonClick}> https://rosaparks.app/register/{this.state.session_option} </button>
 								</div>
 								: null
 						}
-
 
 					</div>
 				</header>

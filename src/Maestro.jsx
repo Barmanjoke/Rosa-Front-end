@@ -2,6 +2,8 @@ import React from 'react';
 import EntryChoice from './EntryChoice';
 import Safespace from './Safespace';
 import HomeIndividual from './HomeIndividual';	
+import Maestro_orga from './Maestro_orga';
+
 
 const fake_individual_profile = {
 	first_name: "Alice",
@@ -16,7 +18,7 @@ class Maestro extends React.Component {
 	constructor(props){
 		super(props);
 		this.state = {
-			current_uid: "home_individual",
+			current_uid: "home_business",
 			user_profile: undefined,
 		}
 	}
@@ -29,7 +31,7 @@ class Maestro extends React.Component {
 		let pages = [
 			{uid: "entry_choice", display: <EntryChoice change_state={this.change_user_profile} />},
 			{uid: "home_individual", display: <HomeIndividual user_profile={fake_individual_profile} />},
-			{uid: "home_business", display: <EntryChoice change_state={this.change_user_profile} />},
+			{uid: "home_business", display: <Maestro_orga change_state={this.change_user_profile} />},
 			{uid: "home_partner", display: <EntryChoice change_state={this.change_user_profile} />},
 			{uid: "home_anonymous", display: <Safespace />},
 		];

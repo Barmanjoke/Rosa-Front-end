@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Organisation from './Organisation';
-import Template from './Template';
 
 class Maestro_orga extends React.Component {
 
@@ -17,7 +16,6 @@ class Maestro_orga extends React.Component {
 	render() {
 		let pages = [
 			{ uid: "orga", display: <Organisation change_current_uid={this.change_current_uid} /> },
-			{ uid: "template", display: <Template change_current_uid={this.change_current_uid} /> },
 		];
 
 		const display = pages.filter((entry) => entry.uid === this.state.current_uid)[0].display;
