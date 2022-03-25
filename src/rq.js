@@ -9,3 +9,15 @@ export async function login(email, password){
     user.picture = user.profile_pic;
     return user;
 }
+
+export async function getSafeZone(userid){
+    return (await axios.get(`${baseURL}/szs/${userid}`)).data[0];
+}
+
+export async function getMessages(szs){
+    return (await axios.get(`${baseURL}/szs/${szs}/messages`)).data;
+}
+
+export async function postMessage(szs, uid, content){
+    return (await axios.post(`${baseURL}/szs/${szs}/messages/${uid}`, { content })).data;
+}

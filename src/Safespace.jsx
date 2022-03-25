@@ -49,10 +49,6 @@ class Safespace extends React.Component {
 		}
 	}
 
-	change_user_profile = (user_profile) => {
-		this.setState({user_profile, current_uid: `home_${user_profile.type_uid}`}); 
-	};
-
 	change_msg_being_written = (msg_being_written) => {
 		this.setState({msg_being_written});
 	};
