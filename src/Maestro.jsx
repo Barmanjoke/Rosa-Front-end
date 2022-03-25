@@ -18,7 +18,7 @@ class Maestro extends React.Component {
 	constructor(props){
 		super(props);
 		this.state = {
-			current_uid: "home_business",
+			current_uid: "entry_choice",
 			user_profile: undefined,
 		}
 	}
