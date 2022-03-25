@@ -51,7 +51,7 @@ class HomeIndividual extends React.Component {
 		const display = pages.filter((entry) => entry.uid === this.state.current_uid)[0].display;
 		return (
 			<div id="home_individual">
-				<nav class="navbar sticky-top color2">
+				<nav class="navbar fixed-top color2">
 					<li class="navbar-brand">
 						<strong className="color2">{`Hello, ${this.props.user_profile.first_name}`}</strong>
 					</li>
@@ -70,7 +70,9 @@ class HomeIndividual extends React.Component {
 						<button className="btn btn-lg btn-success my-2 my-sm-0" type="submit">Search</button>
 					</form>
 				</nav>
-				{display}
+				<div style={{"margin-top" : "7vh"}}>
+					{display}
+				</div>
 			</div>
 		);
 	}
